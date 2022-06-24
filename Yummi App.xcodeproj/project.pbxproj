@@ -58,13 +58,37 @@
 			children = (
 				4D09124228662CC000E3A183 /* AppDelegate.swift */,
 				4D09124428662CC000E3A183 /* SceneDelegate.swift */,
-				4D09124628662CC000E3A183 /* ViewController.swift */,
-				4D09124828662CC000E3A183 /* Main.storyboard */,
+				4D091258286630B200E3A183 /* Models */,
+				4D091257286630A600E3A183 /* Controllers */,
+				4D0912562866309900E3A183 /* Views */,
 				4D09124B28662CC500E3A183 /* Assets.xcassets */,
 				4D09124D28662CC500E3A183 /* LaunchScreen.storyboard */,
 				4D09125028662CC500E3A183 /* Info.plist */,
 			);
 			path = "Yummi App";
+			sourceTree = "<group>";
+		};
+		4D0912562866309900E3A183 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4D09124828662CC000E3A183 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4D091257286630A600E3A183 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4D09124628662CC000E3A183 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4D091258286630B200E3A183 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
