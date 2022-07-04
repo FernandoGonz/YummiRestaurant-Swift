@@ -66,7 +66,7 @@ extension OnboardingViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: K.Onboarding.colectionCellIdentifier, for: indexPath) as! OnboardingCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: K.Onboarding.collectionCellIdentifier, for: indexPath) as! OnboardingCollectionViewCell
         
         // Sending the object to setup method of OnboardingCollectionViewCell: UICollectionViewCell
         cell.setup(self.onboardingSlideBrain.getSlideObject(atIndex: indexPath.row))

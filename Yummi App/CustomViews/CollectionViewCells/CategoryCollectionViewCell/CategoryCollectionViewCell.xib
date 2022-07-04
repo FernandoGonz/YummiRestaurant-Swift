@@ -4,21 +4,70 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CategoryCollectionViewCell" customModule="Yummi_App" customModuleProvider="target">
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCollectionViewCell" id="gTV-IL-0wX" customClass="CategoryCollectionViewCell" customModule="Yummi_App" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Evb-xv-yTM" customClass="CardView" customModule="Yummi_App" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gJK-Tx-3xj">
+                                <rect key="frame" x="5" y="5" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Vp7-qJ-GgC"/>
+                                    <constraint firstAttribute="width" constant="40" id="bBm-na-MdA"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djA-fp-d05">
+                                <rect key="frame" x="50" y="5" width="95" height="40"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="djA-fp-d05" firstAttribute="centerY" secondItem="Evb-xv-yTM" secondAttribute="centerY" id="40b-mJ-KtB"/>
+                            <constraint firstItem="djA-fp-d05" firstAttribute="leading" secondItem="gJK-Tx-3xj" secondAttribute="trailing" constant="5" id="Dv2-0d-o8f"/>
+                            <constraint firstItem="gJK-Tx-3xj" firstAttribute="top" secondItem="Evb-xv-yTM" secondAttribute="top" constant="5" id="F6P-ik-128"/>
+                            <constraint firstAttribute="width" constant="150" id="JHi-xF-RI6"/>
+                            <constraint firstAttribute="bottom" secondItem="djA-fp-d05" secondAttribute="bottom" constant="5" id="Jml-xI-QLu"/>
+                            <constraint firstAttribute="trailing" secondItem="djA-fp-d05" secondAttribute="trailing" constant="5" id="QcB-KV-Ca8"/>
+                            <constraint firstItem="gJK-Tx-3xj" firstAttribute="leading" secondItem="Evb-xv-yTM" secondAttribute="leading" constant="5" id="TZH-OJ-7Os"/>
+                            <constraint firstItem="djA-fp-d05" firstAttribute="top" secondItem="Evb-xv-yTM" secondAttribute="top" constant="5" id="Wsg-Yh-IjZ"/>
+                            <constraint firstAttribute="bottom" secondItem="gJK-Tx-3xj" secondAttribute="bottom" constant="5" id="u1f-lL-LA1"/>
+                            <constraint firstAttribute="height" constant="50" id="v16-py-Jwo"/>
+                        </constraints>
+                    </view>
+                </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="Evb-xv-yTM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Dyi-2L-NsM"/>
+                <constraint firstAttribute="bottom" secondItem="Evb-xv-yTM" secondAttribute="bottom" id="Jjt-Xa-LbW"/>
+                <constraint firstAttribute="trailing" secondItem="Evb-xv-yTM" secondAttribute="trailing" id="LRw-nn-eKj"/>
+                <constraint firstItem="Evb-xv-yTM" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="lt0-Te-PBG"/>
+            </constraints>
             <size key="customSize" width="150" height="50"/>
-            <point key="canvasLocation" x="-168.11594202898553" y="-14.0625"/>
+            <connections>
+                <outlet property="categoryImageView" destination="gJK-Tx-3xj" id="APZ-jV-pPe"/>
+                <outlet property="categoryLabel" destination="djA-fp-d05" id="ae8-tL-rgv"/>
+            </connections>
+            <point key="canvasLocation" x="-168.11594202898553" y="-33.482142857142854"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

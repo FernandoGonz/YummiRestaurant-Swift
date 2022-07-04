@@ -9,9 +9,12 @@ import Foundation
 
 struct K {
     struct Onboarding {
-        static let colectionCellIdentifier = "OnboardingCollectionViewCell"
+        static let collectionCellIdentifier = "OnboardingCollectionViewCell"
     }
     struct HomePage {
         static let storyboardHomePageIdentifier = "HomeNC"
+        
+        static let categoryCollectionCellIdentifier = "CategoryCollectionViewCell"
+        static let dishPortraitCollectionViewCellIdentifier = "DishPortraitCollectionViewCell"
     }
 }
