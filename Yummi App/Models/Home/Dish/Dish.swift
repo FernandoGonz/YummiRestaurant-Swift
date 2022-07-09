@@ -15,7 +15,7 @@ struct Dish {
     let caloriesDesc: Double
     let descriptionDesc: String
     var formattedCalories: String {
-        return String(format: "%.1f", self.caloriesDesc)
+        return String(format: "%.1f calories", self.caloriesDesc)
     }
     
     init(dishId: String, titleDesc: String, imageDesc: String, caloriesDesc: Double, descriptionDesc: String) {

@@ -27,5 +27,4 @@ class DishPortraitCollectionViewCell: UICollectionViewCell {
         self.caloriesLabel.text = dish.formattedCalories
         self.descriptionLabel.text = dish.descriptionDesc
     }
-
 }

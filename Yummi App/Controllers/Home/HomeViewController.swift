@@ -8,7 +8,7 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     @IBOutlet weak var popularCollectionView: UICollectionView!
     
@@ -17,7 +17,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.title = "Yummie"
         
         // NOTE: the next two lines I did them through control drag delegate, datasource
@@ -34,17 +34,17 @@ class HomeViewController: UIViewController {
         popularCollectionView.register(UINib(nibName: K.HomePage.dishPortraitCollectionViewCellIdentifier, bundle: nil), forCellWithReuseIdentifier: K.HomePage.dishPortraitCollectionViewCellIdentifier)
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
 
 // MARK: - UICollectionViewDelegate
@@ -70,7 +70,7 @@ extension HomeViewController: UICollectionViewDataSource {
         case self.popularCollectionView:
             return self.dishBrain.getCount()
         default:
-            return 0
+            return 1
         }
     }
     
@@ -86,8 +86,10 @@ extension HomeViewController: UICollectionViewDataSource {
             let cell: DishPortraitCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: K.HomePage.dishPortraitCollectionViewCellIdentifier, for: indexPath) as! DishPortraitCollectionViewCell
             
             cell.setup(with: self.dishBrain.getDish(atIndex: indexPath.row))
-        default:
             
+            return cell
+        default:
+            return UICollectionViewCell()
         }
     }
 }
